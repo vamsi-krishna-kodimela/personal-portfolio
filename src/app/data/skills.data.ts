@@ -1,7 +1,8 @@
-const skills: {
+interface Skill {
   title: string;
   image: string;
-}[] = [
+}
+const skills: Skill[] = [
   {
     title: 'Angular',
     image: 'assets/skills/angular.png',
@@ -60,4 +61,4 @@ const skills: {
   },
 ];
 
-export { skills };
+export { skills, Skill };

@@ -58,6 +58,66 @@
       </div>
     </div>
   </div>
-  <div class="section" id="projects">Hello World</div>
-  <div class="section" id="contactUs">Hiiiiii</div>
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid" #project>
+      <div class="project" *ngFor="let project of projects; let index = index">
+        <div class="project-meta">
+          <h3 [title]="project.title">{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="project-actions">
+            <a [href]="project.github" class="action"
+              ><i-feather name="link-2" class="icon"></i-feather
+            ></a>
+            <a [href]="project.github" class="action"
+              ><i-feather name="code" class="icon"></i-feather
+            ></a>
+          </div>
+        </div>
+
+        <img [src]="project.image" [alt]="project.title" />
+      </div>
+    </div>
+  </div>
+  <div class="section" id="contactUs">
+    <div class="contact-info">
+      <h2>Get in touch</h2>
+      <p>
+        I'm currently available for freelance work. If you have a project that
+        you want to get started, think you need my help with something or just
+        fancy saying hey, then get in touch.
+      </p>
+      <div class="social-links">
+        <a
+          [href]="link.url"
+          [title]="link.name"
+          target="_blank"
+          class="link"
+          *ngFor="let link of contactSocialLinks"
+          ><i-feather name="{{ link.icon }}" class="icon"></i-feather
+        ></a>
+      </div>
+    </div>
+    <div class="conact-form">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Who are you..." />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="How can I reach you..." />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            placeholder="Let's start with something to chat..."
+            rows="5"
+          ></textarea>
+        </div>
+        <button type="button">Send</button>
+      </form>
+    </div>
+  </div>
 </div>

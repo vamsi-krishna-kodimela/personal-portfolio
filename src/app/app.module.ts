@@ -10,9 +10,25 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  Code,
+  Link2,
+  Mail,
+  File,
+  BookOpen,
 } from 'angular-feather/icons';
 
-const icons = { Menu, Github, Linkedin, Twitter, Instagram };
+const icons = {
+  Menu,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Code,
+  Link2,
+  Mail,
+  File,
+  BookOpen,
+};
 
 @NgModule({
   declarations: [AppComponent],
