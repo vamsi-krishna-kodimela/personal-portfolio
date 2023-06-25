@@ -20,7 +20,7 @@
     "@angular/router": "^16.0.0",
     "@types/gsap": "^3.0.0",
     "angular-feather": "^6.5.0",
-    "gsap": "^3.12.1",
+    "gsap": "npm:@gsap/member@^3.12.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

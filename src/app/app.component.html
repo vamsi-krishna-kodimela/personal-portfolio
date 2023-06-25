@@ -44,44 +44,17 @@
         by creating rich & interactive applications that work across platforms &
         devices.
       </p>
-      <p class="about">
-        I m a Full Stack Developer with over 5+ years of experience and
-        enthusiastic to explore blockchain and XR technologies for a better
-        tomorrow.<br /><br />I help startups to bring their ideas into reality
-        by creating rich & interactive applications that work across platforms &
-        devices.
-      </p>
-      <p class="about">
-        I m a Full Stack Developer with over 5+ years of experience and
-        enthusiastic to explore blockchain and XR technologies for a better
-        tomorrow.<br /><br />I help startups to bring their ideas into reality
-        by creating rich & interactive applications that work across platforms &
-        devices.
-      </p>
-      <p class="about">
-        I m a Full Stack Developer with over 5+ years of experience and
-        enthusiastic to explore blockchain and XR technologies for a better
-        tomorrow.<br /><br />I help startups to bring their ideas into reality
-        by creating rich & interactive applications that work across platforms &
-        devices.
-      </p>
-      <p class="about">
-        I m a Full Stack Developer with over 5+ years of experience and
-        enthusiastic to explore blockchain and XR technologies for a better
-        tomorrow.<br /><br />I help startups to bring their ideas into reality
-        by creating rich & interactive applications that work across platforms &
-        devices.
-      </p>
-      <p class="about">
-        I m a Full Stack Developer with over 5+ years of experience and
-        enthusiastic to explore blockchain and XR technologies for a better
-        tomorrow.<br /><br />I help startups to bring their ideas into reality
-        by creating rich & interactive applications that work across platforms &
-        devices.
-      </p>
+
       <div class="skills">
         <h2>I work with:</h2>
-        <div class="skills-grid"></div>
+        <div class="skills-grid">
+          <div
+            class="skill"
+            *ngFor="let skill of skills"
+            [title]="skill.title"
+            [ngStyle]="{ 'background-image': 'url(' + skill.image + ')' }"
+          ></div>
+        </div>
       </div>
     </div>
   </div>

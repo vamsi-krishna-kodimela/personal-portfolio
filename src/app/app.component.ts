@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { skills } from './data/skills.data';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +10,21 @@ import { ScrollTrigger } from 'gsap/all';
 })
 export class AppComponent {
   title = 'portfolio-1';
+  skills;
+  constructor() {
+    this.skills = [...skills];
+  }
 
   @ViewChild('about') about: ElementRef | undefined;
 
   ngAfterViewInit() {
-    let offset = window.innerHeight * 4.5;
+    let offset = window.innerHeight * 3.5;
+    let descriptionOffset = 0;
     if (this.about) {
+      descriptionOffset =
+        this.about.nativeElement.scrollHeight -
+        this.about.nativeElement.clientHeight +
+        80;
       offset += this.about.nativeElement.scrollHeight;
     }
 
@@ -30,15 +40,14 @@ export class AppComponent {
     const timeline = gsap.timeline({
       scrollTrigger: pageAnimaionConfig,
     });
-    const descriptionOffset =
-      this.about?.nativeElement.scrollHeight + 80 - window.innerHeight;
+
     timeline
-      .to('#about', { top: '0', duration: 1 })
+      .to('#about', { top: '0', duration: 3, ease: 'power2.inOut' })
       .to('.description', {
         y: `-${descriptionOffset}`,
-        duration: 3,
+        duration: 1,
       })
-      .to('#projects', { top: '0', duration: 1 })
-      .to('#contactUs', { top: '0', duration: 1 });
+      .to('#projects', { top: '0', duration: 3, ease: 'power2.inOut' })
+      .to('#contactUs', { top: '0', duration: 3, ease: 'power2.inOut' });
   }
 }
