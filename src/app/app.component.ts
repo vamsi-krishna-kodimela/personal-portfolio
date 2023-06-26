@@ -113,4 +113,7 @@ export class AppComponent {
       });
     });
   }
+  navigateTo(url: string) {
+    window.open(url, '_blank');
+  }
 }

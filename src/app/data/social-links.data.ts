@@ -7,12 +7,6 @@ interface SocialLink {
 
 const socialLinks: SocialLink[] = [
   {
-    name: 'Email',
-    url: 'mailto:vamsikrishnakdml@gmail.com',
-    icon: 'mail',
-    type: 'all',
-  },
-  {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/vamsi-krishna-kodimela/',
     icon: 'linkedin',
@@ -26,19 +20,19 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/vamsi_krishna_k/',
+    url: 'https://www.instagram.com/vamsi.kodimela/',
     icon: 'instagram',
     type: 'all',
   },
   {
     name: 'Medium',
-    url: 'https://medium.com/@vamsikrishnakdml',
+    url: 'https://vamsikrishnakodimela.medium.com/',
     icon: 'book-open',
     type: 'all',
   },
   {
     name: 'Twitter',
-    url: 'https://twitter.com/vamsi_krishna_k',
+    url: 'https://twitter.com/vamsi_kodimela',
     icon: 'twitter',
     type: 'all',
   },

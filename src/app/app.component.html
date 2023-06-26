@@ -1,7 +1,7 @@
 <div class="main">
   <div class="section" id="hero">
     <nav>
-      <h1>Vamsi Kodimela</h1>
+      <h1>r3_v3ng3r</h1>
       <button class="toggle-menu">
         <i-feather name="menu" ngClass="menu-icon"></i-feather>
       </button>
@@ -16,17 +16,12 @@
     <div class="hero-footer">
       <div class="with-love">made with <span>Passion</span></div>
       <div class="social-icons">
-        <button>
-          <i-feather name="github" ngClass="icon"></i-feather>
-        </button>
-        <button>
-          <i-feather name="linkedin" ngClass="icon"></i-feather>
-        </button>
-        <button>
-          <i-feather name="twitter" ngClass="icon"></i-feather>
-        </button>
-        <button>
-          <i-feather name="instagram" ngClass="icon"></i-feather>
+        <button
+          *ngFor="let link of contactSocialLinks"
+          [title]="link.name"
+          (click)="navigateTo(link.url)"
+        >
+          <i-feather [name]="link.icon" ngClass="icon"></i-feather>
         </button>
       </div>
     </div>
