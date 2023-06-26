@@ -87,11 +87,29 @@ export class AppComponent {
         duration: 3,
       })
       .to('#contactUs', { top: '0', duration: 3, ease: 'power2.inOut' });
+    this.listenToMouse();
   }
 
   get contactSocialLinks() {
     return this.socialLinks.filter((socialLink) =>
       ['all', 'contact'].includes(socialLink.type)
     );
+  }
+
+  listenToMouse() {
+    document.body.addEventListener('mousemove', (evt) => {
+      const mouseX = evt.clientX;
+      const mouseY = evt.clientY;
+
+      gsap.set('.cursor', {
+        x: mouseX,
+        y: mouseY,
+      });
+
+      gsap.set('.cursor-point', {
+        x: mouseX,
+        y: mouseY,
+      });
+    });
   }
 }
