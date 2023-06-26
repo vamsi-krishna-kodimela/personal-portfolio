@@ -67,7 +67,7 @@ export class AppComponent {
     const pageAnimaionConfig: ScrollTrigger.Vars = {
       trigger: '.main',
       start: 'top top',
-      end: () => `+=${this.generateOffset()}`,
+      end: `+=${this.generateOffset()}`,
       scrub: true,
       pin: true,
     };
@@ -79,13 +79,15 @@ export class AppComponent {
     timeline
       .to('#about', { top: '0', duration: 3, ease: 'power2.inOut' })
       .to('.description', {
-        y: () => `-${this.generateDescriptionOffset()}`,
+        y: `-${this.generateDescriptionOffset()}`,
         duration: 3,
+        ease: 'power2.inOut',
       })
       .to('#projects', { top: '0', duration: 3, ease: 'power2.inOut' })
       .to('.projects-grid', {
-        x: () => `-${this.generateProjectsOffset()}`,
+        x: `-${this.generateProjectsOffset()}`,
         duration: 3,
+        ease: 'power2.inOut',
       })
       .to('#contactUs', { top: '0', duration: 3, ease: 'power2.inOut' });
     this.listenToMouse();
