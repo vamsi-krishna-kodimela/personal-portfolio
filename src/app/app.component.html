@@ -66,16 +66,22 @@
           <h3 [title]="project.title">{{ project.title }}</h3>
           <p>{{ project.description }}</p>
           <div class="project-actions">
-            <a [href]="project.github" class="action"
+            <a [href]="project.link" class="action" *ngIf="project.link"
               ><i-feather name="link-2" class="icon"></i-feather
             ></a>
-            <a [href]="project.github" class="action"
+            <a
+              [href]="project.github"
+              class="action"
+              target="_blank"
+              *ngIf="project.github"
               ><i-feather name="code" class="icon"></i-feather
             ></a>
           </div>
         </div>
-
-        <img [src]="project.image" [alt]="project.title" />
+        <div
+          class="img"
+          [ngStyle]="{ 'background-image': 'url(' + project.image + ')' }"
+        ></div>
       </div>
     </div>
   </div>

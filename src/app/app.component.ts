@@ -56,7 +56,8 @@ export class AppComponent {
     if (this.projectsRef) {
       projectsOffset =
         this.projectsRef.nativeElement.scrollWidth -
-        this.projectsRef.nativeElement.clientWidth;
+        this.projectsRef.nativeElement.clientWidth +
+        80;
     }
     return projectsOffset;
   }
