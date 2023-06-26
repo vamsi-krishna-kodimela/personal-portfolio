@@ -71,6 +71,9 @@ export class AppComponent {
       scrub: true,
       pin: true,
       anticipatePin: 1,
+      markers: {
+        fontSize: '0px',
+      },
     };
 
     const timeline = gsap.timeline({
