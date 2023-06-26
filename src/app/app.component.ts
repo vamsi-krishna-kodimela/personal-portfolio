@@ -70,6 +70,7 @@ export class AppComponent {
       end: `+=${this.generateOffset()}`,
       scrub: true,
       pin: true,
+      anticipatePin: 1,
     };
 
     const timeline = gsap.timeline({
